@@ -17,7 +17,7 @@ For this project, I learn how to set up a small honeynet in Azure and collected 
 ## Architecture After Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
 
-The architecture of the mini honeynet in Azure consists of the following components:
+The small Azure honeynet is made up of the following components:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
@@ -27,9 +27,9 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Storage Account
 - Microsoft Sentinel
 
-For the "BEFORE" metrics, all resources were originally deployed, and exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+For the "BEFORE" metrics, all resources were intentionally deployed and made available to the internet. The Virtual Machines' Network Security Groups and built-in firewalls were configured with unfettered access, and all other resources were deployed using public endpoints accessible via the Internet, therefore Private Endpoints were not used.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic except my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+For the "AFTER" metrics, Network Security Groups had been improved by reducing(Blocked) ALL traffic except connections from my admin workstation, whereas all other resources were shielded by built-in firewalls and Private Endpoints.
 
 ## Attack Maps Before Hardening / Security Controls
 ![image](https://github.com/soriesesay1/Azure-SOC/assets/154941302/cf067c0f-8a8c-40dd-b006-607cfb474781)
